@@ -36,7 +36,13 @@ test.describe('all tests', () => {
         await search.searchFullProccess();
         let first = await table.tableCells(1);
         expect(first).toBe('אידומו     אפ 1');
-
     })
+
+    test('counting how many rows in the table' ,async() =>{
+        await search.searchFullProccess();
+        let count = await table.countOfTbleRows()
+        expect(count).toBe(30)
+
+    });
 
 });
